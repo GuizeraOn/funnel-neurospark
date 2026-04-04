@@ -6,8 +6,8 @@
 <title>Quiz NeuroSpark</title>
 
 <!-- Preload critical images -->
-<link rel="preload" as="image" href="images/brain-gamma-waves.webp" />
-<link rel="preload" as="image" href="images/dra_vargas.webp" />
+<link rel="preload" as="image" href="/images/brain-gamma-waves.webp" />
+<link rel="preload" as="image" href="/images/dra_vargas.webp" />
 
 <!-- Distinctive font: Plus Jakarta Sans - geometric, authoritative, warm -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -666,7 +666,7 @@ const steps = [
       'Respira profundo: los retrocesos de tu hijo no son culpa tuya.',
       'Su cerebro está luchando contra una deficiencia de Ondas Gamma (40Hz). Hasta que no sincronicemos esta frecuencia, las áreas del lenguaje seguirán desconectadas.'
     ],
-    imgSrc: 'images/break-brain.webp',
+    imgSrc: '/images/break-brain.webp',
     nextLabel: 'Ver cómo sincronizar su cerebro →'
   },
   // Step 4 — single_select (age)
@@ -948,7 +948,7 @@ function advance() {
 }
 
 function handleCTA() {
-  window.location.href = 'neuro_vsl/index.html' + window.location.search;
+  window.location.href = '/neuro_vsl/' + window.location.search;
 }
 
 /* ─── LOADING SEQUENCE ───────────────────────────────── */
@@ -1020,9 +1020,9 @@ function postRender(step) {
     const img = new Image();
     img.onload = () => {
       const wrap = document.getElementById('dra-avatar-wrap');
-      if (wrap) wrap.innerHTML = `<img src="images/dra_vargas.webp" class="dra-avatar" alt="Dra. Elisa Vargas" width="80" height="80" />`;
+      if (wrap) wrap.innerHTML = `<img src="/images/dra_vargas.webp" class="dra-avatar" alt="Dra. Elisa Vargas" width="80" height="80" />`;
     };
-    img.src = 'images/dra_vargas.webp';
+    img.src = '/images/dra_vargas.webp';
   }
 }
 
